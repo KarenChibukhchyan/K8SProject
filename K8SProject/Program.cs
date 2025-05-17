@@ -7,7 +7,7 @@ Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(configuration).Cre
 
 try
 {
-    Log.Information("Hello world!");
+    Log.Information("Hello world!!!");
 }
 catch (Exception ex)
 {
