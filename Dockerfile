@@ -5,7 +5,7 @@ WORKDIR /app
 # Build stage
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
-COPY ["K8SProject/K8SProject.csproj", "K8SProject/"]
+COPY ["src/K8SProject/K8SProject.csproj", "K8SProject/"]
 RUN dotnet restore "K8SProject/K8SProject.csproj"
 COPY . .
 WORKDIR "/src/K8SProject"
@@ -20,5 +20,5 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 # Copy appsettings.json to output directory
-COPY K8SProject/appsettings.json .
+COPY src/K8SProject/appsettings.json .
 ENTRYPOINT ["dotnet", "K8SProject.dll"]
