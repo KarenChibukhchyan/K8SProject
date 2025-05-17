@@ -13,6 +13,9 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v3
 
+      - name: Build C# project directly
+        run: dotnet build src/K8SProject/K8SProject.csproj
+
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
