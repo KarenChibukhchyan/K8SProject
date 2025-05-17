@@ -20,5 +20,5 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 # Copy appsettings.json to output directory
-COPY src/K8SProject/appsettings.json .
+COPY K8SProject/appsettings.json .
 ENTRYPOINT ["dotnet", "K8SProject.dll"]
