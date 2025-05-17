@@ -21,8 +21,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/K8SProject:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/k8sproject:latest .
 
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/K8SProject:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/k8sproject:latest
