@@ -9,8 +9,6 @@ COPY ["src/K8SProject/K8SProject.csproj", "K8SProject/"]
 RUN dotnet restore "K8SProject/K8SProject.csproj"
 COPY . .
 WORKDIR "/src/K8SProject"
-RUN dotnet clean K8SProject.csproj -c Release -o /app/build
-
 RUN dotnet build "K8SProject.csproj" -c Release -o /app/build
 
 # Publish stage
