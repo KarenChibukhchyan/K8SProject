@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Serilog;
 
-public class Wau
+public class Program1
 {
     public static void Main(string[] args)
     {
