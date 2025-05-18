@@ -1,9 +1,9 @@
 ﻿# Use official .NET runtime as base image
-FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 
 # Build stage
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY ["src/K8SProject/K8SProject.csproj", "K8SProject/"]
 RUN dotnet restore "K8SProject/K8SProject.csproj"
