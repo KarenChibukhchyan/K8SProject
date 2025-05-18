@@ -8,7 +8,7 @@ WORKDIR /src
 COPY ["src/K8SProject/K8SProject.csproj", "K8SProject/"]
 RUN dotnet restore "K8SProject/K8SProject.csproj"
 WORKDIR /src/K8SProject
-COPY . .
+COPY ./src .
 RUN dotnet build "K8SProject.csproj" -c Release -o /app/build
 
 # Publish stage
