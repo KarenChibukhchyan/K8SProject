@@ -18,6 +18,8 @@ spec:
           volumeMounts:
             - name: log-volume
               mountPath: /app/Logs  # Must match path from appsettings.json
+      imagePullSecrets:
+        - name: regcred  # Ensure this matches the secret name in dockerhub-secret.yaml
       volumes:
         - name: log-volume
           persistentVolumeClaim:
