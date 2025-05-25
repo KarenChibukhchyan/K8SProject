@@ -3,6 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K8SProject", "src\K8SProject\K8SProject.csproj", "{26989748-0574-4737-AFFE-260928462D61}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EE87B2B6-F1DA-4516-8FFA-A05A1A0B2EE1}"
+	ProjectSection(SolutionItems) = preProject
+		src\k8s\volume.yml = src\k8s\volume.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

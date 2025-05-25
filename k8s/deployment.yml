@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnet-logger
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dotnet-logger
+  template:
+    metadata:
+      labels:
+        app: dotnet-logger
+    spec:
+      containers:
+        - name: dotnet-logger
+          image: karenchibukhchyandevops/k8sproject:latest
+          volumeMounts:
+            - name: log-volume
+              mountPath: /app/Logs  # Must match path from appsettings.json
+      volumes:
+        - name: log-volume
+          persistentVolumeClaim:
+            claimName: log-pvc
