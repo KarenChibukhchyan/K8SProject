@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: dotnet-logger
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: dotnet-logger
@@ -17,10 +17,11 @@ spec:
           image: karenchibukhchyandevops/k8sproject:latest
           volumeMounts:
             - name: log-volume
-              mountPath: /app/Logs  # Must match path from appsettings.json
+              mountPath: /app/Logs
       imagePullSecrets:
-        - name: regcred  # Ensure this matches the secret name in dockerhub-secret.yaml
+        - name: regcred
       volumes:
         - name: log-volume
-          persistentVolumeClaim:
-            claimName: log-pvc
+          hostPath:
+            path: /mnt/data/logs
+            type: DirectoryOrCreate
