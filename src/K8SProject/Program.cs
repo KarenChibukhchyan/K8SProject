@@ -11,10 +11,10 @@ public class Program
 
         try
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 Log.Information("Hello world!!!");
-                Thread.Sleep(1000);
+                Thread.Sleep(3_000);
             }
         }
         catch (Exception ex)
