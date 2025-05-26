@@ -13,7 +13,7 @@ public class Program
         {
             for (int i = 0; i < 10; i++)
             {
-                Log.Information("Hello sky!!!");
+                Log.Information("Hello world!!!");
                 Thread.Sleep(3_000);
             }
         }
