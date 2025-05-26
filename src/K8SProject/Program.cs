@@ -11,9 +11,9 @@ public class Program
 
         try
         {
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < 10; i++)
             {
-                Log.Information("Hello another world!!!");
+                Log.Information("Hello world!!!");
                 Thread.Sleep(3_000);
             }
         }
